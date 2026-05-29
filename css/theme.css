@@ -1,0 +1,112 @@
+/* JBS Corp — brand palette (pulled from the live site) + custom component styles.
+   Tailwind (via CDN) handles layout/utilities; this file pins exact colors and
+   the few interactions Tailwind utilities don't cover. */
+
+:root {
+  --navy-900: #1F3767; /* deep navy brand */
+  --navy-800: #183B56; /* primary body text / dark UI */
+  --blue-700: #0056A7; /* strong blue */
+  --blue-600: #1863DC; /* bright royal blue (primary CTA) */
+  --cyan-500: #1A92CF; /* primary accent */
+  --slate-600: #4E4B66; /* muted secondary text */
+  --grey-200: #D0D5D2; /* borders / dividers */
+  --ink-900: #212121;
+  --accent-orange: #CF531A; /* used sparingly */
+
+  --shadow-card: 0 10px 30px -12px rgba(24, 59, 86, 0.25);
+  --shadow-nav: 0 6px 24px -16px rgba(24, 59, 86, 0.45);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--navy-800);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hero background: white with a subtle navy->cyan geometric wash. */
+.hero-bg {
+  background:
+    radial-gradient(1100px 520px at 88% -8%, rgba(26, 146, 207, 0.14), transparent 60%),
+    radial-gradient(820px 480px at -5% 10%, rgba(31, 55, 103, 0.08), transparent 55%),
+    #ffffff;
+}
+
+/* Cyan underline accent on the hero headline keyword. */
+.accent-underline {
+  position: relative;
+  white-space: nowrap;
+}
+.accent-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.06em;
+  height: 0.28em;
+  background: linear-gradient(90deg, var(--cyan-500), rgba(26, 146, 207, 0.35));
+  border-radius: 999px;
+  z-index: -1;
+}
+
+/* Primary button shimmer/lift. */
+.btn-primary {
+  background: var(--blue-600);
+  color: #fff;
+  box-shadow: 0 10px 24px -12px rgba(24, 99, 220, 0.65);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover { background: var(--blue-700); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-ghost {
+  border: 1.5px solid var(--grey-200);
+  color: var(--navy-800);
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.btn-ghost:hover { border-color: var(--cyan-500); color: var(--cyan-500); }
+
+/* Sticky header: shadow appears once scrolled (toggled in main.js). */
+#site-header { transition: box-shadow 0.2s ease, background 0.2s ease; }
+#site-header.is-scrolled { box-shadow: var(--shadow-nav); }
+
+/* Desktop dropdown menus. */
+.nav-item > .nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  box-shadow: var(--shadow-card);
+}
+.nav-item:hover > .nav-dropdown,
+.nav-item:focus-within > .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-link { position: relative; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: var(--cyan-500);
+  transition: width 0.18s ease;
+}
+.nav-item:hover .nav-link::after,
+.nav-link:hover::after { width: 100%; }
+
+/* Mobile menu slide-in. */
+#mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.28s ease;
+}
+#mobile-menu.is-open { transform: translateX(0); }
+
+/* Respect reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

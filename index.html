@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JBS Corp — The Tax Firm That Gets the Full Picture</title>
+  <meta name="description" content="Institutional-grade accounting, tax, and advisory with the personal attention of a local firm. Serving individuals, families, and growing businesses in all 50 states." />
+
+  <!-- Roboto (same family as the original site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { 900: '#1F3767', 800: '#183B56' },
+            brand: { 700: '#0056A7', 600: '#1863DC' },
+            cyan:  { 500: '#1A92CF' },
+            slate: { 600: '#4E4B66' },
+            line:  { 200: '#D0D5D2' },
+            ink:   { 900: '#212121' },
+            rust:  { 500: '#CF531A' },
+          },
+          fontFamily: { sans: ['Roboto', 'system-ui', 'sans-serif'] },
+          maxWidth: { container: '1200px' },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+
+<body class="bg-white text-navy-800">
+
+  <!-- ============ HEADER ============ -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white">
+    <!-- Utility bar -->
+    <div class="bg-navy-900 text-white/90 text-[13px]">
+      <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 flex h-9 items-center justify-between">
+        <p class="flex items-center gap-2 truncate">
+          <svg class="h-3.5 w-3.5 text-cyan-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span class="truncate">Lawrence &amp; Methuen, MA · Serving all 50 states</span>
+        </p>
+        <div class="hidden sm:flex items-center gap-5">
+          <a href="https://jacquelinebserv.securepayments.cardpointe.com/pay" target="_blank" rel="noopener" class="hover:text-cyan-500 transition-colors">Make a Payment</a>
+          <span class="h-3 w-px bg-white/25"></span>
+          <a href="https://jbscorp.taxdome.com/en-us/signup" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-cyan-500 transition-colors">
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="9" rx="2"/><path stroke-linecap="round" d="M8 11V8a4 4 0 118 0v3"/></svg>
+            Client Portal
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main nav -->
+    <nav class="border-b border-line-200/70 bg-white" aria-label="Primary">
+      <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 flex h-[68px] items-center justify-between gap-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 shrink-0" aria-label="JBS Corp home">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-navy-900 text-white font-black tracking-tight">JBS</span>
+          <span class="hidden sm:flex flex-col leading-none">
+            <span class="text-[19px] font-black text-navy-900 tracking-tight">JBS Corp</span>
+            <span class="text-[11px] font-medium uppercase tracking-[0.18em] text-cyan-500">Accounting · Tax · Advisory</span>
+          </span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden lg:flex items-center gap-1 text-[15px] font-medium text-navy-800">
+          <!-- Individual -->
+          <li class="nav-item relative">
+            <button class="nav-link flex items-center gap-1 rounded-md px-3 py-2 hover:text-cyan-500 transition-colors">
+              Individual
+              <svg class="h-4 w-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="nav-dropdown absolute left-0 top-full pt-3 w-64">
+              <div class="rounded-xl border border-line-200/70 bg-white p-2">
+                <a href="pages/individual-tax.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5">
+                  <span class="block font-semibold text-navy-900">Tax &amp; Planning</span>
+                  <span class="block text-[13px] text-slate-600">Personal returns, planning &amp; advisory</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Business -->
+          <li class="nav-item relative">
+            <button class="nav-link flex items-center gap-1 rounded-md px-3 py-2 hover:text-cyan-500 transition-colors">
+              Business
+              <svg class="h-4 w-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="nav-dropdown absolute left-0 top-full pt-3 w-72">
+              <div class="rounded-xl border border-line-200/70 bg-white p-2">
+                <a href="pages/business-bookkeeping.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5">
+                  <span class="block font-semibold text-navy-900">Bookkeeping &amp; Controllership</span>
+                  <span class="block text-[13px] text-slate-600">Clean books, payroll &amp; reporting</span>
+                </a>
+                <a href="pages/business-tax.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5">
+                  <span class="block font-semibold text-navy-900">Business Tax</span>
+                  <span class="block text-[13px] text-slate-600">Entity returns, strategy &amp; compliance</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Resources -->
+          <li class="nav-item relative">
+            <button class="nav-link flex items-center gap-1 rounded-md px-3 py-2 hover:text-cyan-500 transition-colors">
+              Resources
+              <svg class="h-4 w-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="nav-dropdown absolute left-0 top-full pt-3 w-64">
+              <div class="rounded-xl border border-line-200/70 bg-white p-2">
+                <a href="pages/resources.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5"><span class="font-semibold text-navy-900">Articles</span></a>
+                <a href="pages/resources.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5"><span class="font-semibold text-navy-900">Business Owner Info Hub</span></a>
+                <a href="pages/resources.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5"><span class="font-semibold text-navy-900">Financial Assessment</span></a>
+              </div>
+            </div>
+          </li>
+
+          <!-- About -->
+          <li class="nav-item relative">
+            <button class="nav-link flex items-center gap-1 rounded-md px-3 py-2 hover:text-cyan-500 transition-colors">
+              About JBS
+              <svg class="h-4 w-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="nav-dropdown absolute left-0 top-full pt-3 w-56">
+              <div class="rounded-xl border border-line-200/70 bg-white p-2">
+                <a href="pages/about.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5"><span class="font-semibold text-navy-900">Careers</span></a>
+                <a href="pages/reviews.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5"><span class="font-semibold text-navy-900">Reviews</span></a>
+                <a href="pages/about.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5"><span class="font-semibold text-navy-900">Podcast</span></a>
+                <a href="pages/about.html" class="block rounded-lg px-3 py-2.5 hover:bg-navy-900/5"><span class="font-semibold text-navy-900">Events</span></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Desktop CTA -->
+        <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener"
+           class="btn-primary hidden lg:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path stroke-linecap="round" d="M16 3v4M8 3v4M3 10h18"/></svg>
+          Book Appointment
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button id="menu-open" class="lg:hidden grid h-10 w-10 place-items-center rounded-lg border border-line-200 text-navy-900" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 z-50 hidden bg-navy-900/50"></div>
+  <aside id="mobile-menu" class="fixed right-0 top-0 z-50 h-full w-[86%] max-w-sm bg-white shadow-2xl lg:hidden flex flex-col" aria-label="Mobile">
+    <div class="flex items-center justify-between border-b border-line-200 px-5 h-[68px]">
+      <span class="text-lg font-black text-navy-900">JBS Corp</span>
+      <button id="menu-close" class="grid h-10 w-10 place-items-center rounded-lg border border-line-200 text-navy-900" aria-label="Close menu">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-5 py-4 text-navy-800">
+      <p class="px-1 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-widest text-slate-600">Individual</p>
+      <a href="pages/individual-tax.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Tax &amp; Planning</a>
+      <p class="px-1 pt-4 pb-1 text-[11px] font-semibold uppercase tracking-widest text-slate-600">Business</p>
+      <a href="pages/business-bookkeeping.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Bookkeeping &amp; Controllership</a>
+      <a href="pages/business-tax.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Business Tax</a>
+      <p class="px-1 pt-4 pb-1 text-[11px] font-semibold uppercase tracking-widest text-slate-600">Resources</p>
+      <a href="pages/resources.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Articles</a>
+      <a href="pages/resources.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Business Owner Info Hub</a>
+      <a href="pages/resources.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Financial Assessment</a>
+      <p class="px-1 pt-4 pb-1 text-[11px] font-semibold uppercase tracking-widest text-slate-600">About JBS</p>
+      <a href="pages/about.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Careers</a>
+      <a href="pages/reviews.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Reviews</a>
+      <a href="pages/about.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Podcast</a>
+      <a href="pages/about.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Events</a>
+    </nav>
+    <div class="border-t border-line-200 p-5 space-y-2.5">
+      <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold">Book Appointment</a>
+      <div class="grid grid-cols-2 gap-2.5">
+        <a href="https://jacquelinebserv.securepayments.cardpointe.com/pay" target="_blank" rel="noopener" class="btn-ghost flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold">Make a Payment</a>
+        <a href="https://jbscorp.taxdome.com/en-us/signup" target="_blank" rel="noopener" class="btn-ghost flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold">Client Portal</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero-bg">
+    <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center py-16 sm:py-20 lg:py-24">
+
+      <!-- Left -->
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center gap-2 rounded-full border border-line-200 bg-white px-3.5 py-1.5 text-[13px] font-semibold text-navy-800">
+          <span class="h-2 w-2 rounded-full bg-cyan-500"></span>
+          Accounting · Tax · Advisory
+        </span>
+
+        <h1 class="mt-5 text-4xl sm:text-5xl lg:text-[56px] font-black leading-[1.05] tracking-tight text-navy-900">
+          The Tax Firm That Gets the <span class="accent-underline text-brand-700">Full Picture</span>
+        </h1>
+
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
+          Institutional-grade tax expertise with the personal attention of a local firm —
+          for individuals, families, and growing businesses across all 50 states.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3.5">
+          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener"
+             class="btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold">
+            Get Started
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#services" class="btn-ghost inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold">
+            Explore Services
+          </a>
+        </div>
+
+        <!-- Trust line -->
+        <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-600">
+          <span class="inline-flex items-center gap-2 font-medium text-navy-800">
+            <svg class="h-5 w-5 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 16.9 7.2 18l.9-5.4L4.2 8.7l5.4-.8L12 3z"/></svg>
+            Xero <strong class="font-semibold text-navy-900">2025 Large Firm of the Year</strong>
+          </span>
+          <span class="inline-flex items-center gap-2 font-medium text-navy-800">
+            <svg class="h-5 w-5 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3c2.5 2.5 3.5 6 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-6-3.5-9s1-6.5 3.5-9z"/></svg>
+            Bilingual · English &amp; Español
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: credibility card -->
+      <div class="lg:col-span-5">
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-3xl bg-gradient-to-br from-cyan-500/10 to-navy-900/5 blur-xl"></div>
+          <div class="relative rounded-3xl border border-line-200/70 bg-white p-7 sm:p-8" style="box-shadow: var(--shadow-card);">
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
+              </span>
+              <div>
+                <p class="font-bold text-navy-900 leading-tight">A firm you can build on</p>
+                <p class="text-[13px] text-slate-600">Trusted since 2005</p>
+              </div>
+            </div>
+
+            <div class="mt-6 space-y-3.5">
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-[15px] text-navy-800">Proactive, year-round tax planning</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-[15px] text-navy-800">Bookkeeping &amp; payroll, done right</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-[15px] text-navy-800">Secure client portal &amp; e-signing</p>
+              </div>
+            </div>
+
+            <div class="mt-7 rounded-2xl bg-navy-900 p-5 text-white">
+              <div class="flex items-end justify-between">
+                <div>
+                  <p class="text-3xl font-black leading-none">7K+</p>
+                  <p class="mt-1 text-[13px] text-white/70">Returns filed each year</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-3xl font-black leading-none text-cyan-500">20+</p>
+                  <p class="mt-1 text-[13px] text-white/70">Years of experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STAT BAND ============ -->
+  <section class="border-y border-line-200 bg-white">
+    <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line-200">
+      <div class="py-8 sm:py-10 text-center">
+        <p class="text-4xl sm:text-5xl font-black text-navy-900">20+</p>
+        <p class="mt-1.5 text-sm font-semibold uppercase tracking-wider text-cyan-500">Years in Business</p>
+      </div>
+      <div class="py-8 sm:py-10 text-center">
+        <p class="text-4xl sm:text-5xl font-black text-navy-900">7K+</p>
+        <p class="mt-1.5 text-sm font-semibold uppercase tracking-wider text-cyan-500">Returns Filed Annually</p>
+      </div>
+      <div class="py-8 sm:py-10 text-center">
+        <p class="text-4xl sm:text-5xl font-black text-navy-900">50</p>
+        <p class="mt-1.5 text-sm font-semibold uppercase tracking-wider text-cyan-500">States Serviced</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FIND WHERE YOU FIT ============ -->
+  <section id="services" class="bg-white py-16 sm:py-20 lg:py-24 scroll-mt-28">
+    <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="text-sm font-bold uppercase tracking-[0.18em] text-cyan-500">Who we help</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-black tracking-tight text-navy-900">Find Where You Fit</h2>
+        <p class="mt-3 text-lg text-slate-600">Tailored tax expertise for every situation — pick the path that sounds like you.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- W-2 Employees -->
+        <div class="group flex flex-col rounded-2xl border border-line-200/70 bg-white p-6 transition hover:-translate-y-1 hover:border-cyan-500/50" style="box-shadow: var(--shadow-card);">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-navy-900/5 text-navy-900 transition group-hover:bg-cyan-500 group-hover:text-white">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM4 21v-1a6 6 0 0112 0v1"/></svg>
+          </span>
+          <h3 class="mt-5 text-lg font-bold text-navy-900">W-2 Employees</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">Full-time employees who want accuracy, speed, and every legitimate deduction — done right the first time.</p>
+          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
+            Get Started
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- Real Estate Investors -->
+        <div class="group flex flex-col rounded-2xl border border-line-200/70 bg-white p-6 transition hover:-translate-y-1 hover:border-cyan-500/50" style="box-shadow: var(--shadow-card);">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-navy-900/5 text-navy-900 transition group-hover:bg-cyan-500 group-hover:text-white">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V9l7-5 7 5v12M10 21v-5h4v5"/></svg>
+          </span>
+          <h3 class="mt-5 text-lg font-bold text-navy-900">Real Estate Investors</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">Schedule E, rental income, depreciation, and pass-through deductions — all handled with precision.</p>
+          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
+            Get Started
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- Freelancers & 1099s -->
+        <div class="group flex flex-col rounded-2xl border border-line-200/70 bg-white p-6 transition hover:-translate-y-1 hover:border-cyan-500/50" style="box-shadow: var(--shadow-card);">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-navy-900/5 text-navy-900 transition group-hover:bg-cyan-500 group-hover:text-white">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.2 5.8l3 3L8 19H5v-3L15.2 5.8zM13 8l3 3"/></svg>
+          </span>
+          <h3 class="mt-5 text-lg font-bold text-navy-900">Freelancers &amp; 1099s</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">Schedule C, self-employment tax, home office, equipment — we help you pay only what you owe.</p>
+          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
+            Get Started
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- Small Business Owners -->
+        <div class="group flex flex-col rounded-2xl border border-line-200/70 bg-white p-6 transition hover:-translate-y-1 hover:border-cyan-500/50" style="box-shadow: var(--shadow-card);">
+          <span class="grid h-12 w-12 place-items-center rounded-xl bg-navy-900/5 text-navy-900 transition group-hover:bg-cyan-500 group-hover:text-white">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l1-4h16l1 4M4 9h16v11H4zM9 20v-6h6v6"/></svg>
+          </span>
+          <h3 class="mt-5 text-lg font-bold text-navy-900">Small Business Owners</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">From forming an LLC to running day-to-day operations, we help you navigate taxes and maximize deductions.</p>
+          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
+            Get Started
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ XERO PARTNER AWARDS 2025 ============ -->
+  <section class="bg-navy-900 text-white">
+    <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center py-16 sm:py-20">
+      <!-- Award medallion -->
+      <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+        <div class="relative">
+          <div class="absolute -inset-6 rounded-full bg-cyan-500/15 blur-2xl"></div>
+          <div class="relative grid h-48 w-48 sm:h-56 sm:w-56 place-items-center rounded-full border-2 border-cyan-500/40 bg-white/5">
+            <div class="grid h-36 w-36 sm:h-40 sm:w-40 place-items-center rounded-full border border-white/15 text-center">
+              <div>
+                <svg class="mx-auto h-9 w-9 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+                <p class="mt-2 text-xs font-semibold uppercase tracking-widest text-white/70">Large Firm</p>
+                <p class="text-2xl font-black leading-none">of the Year</p>
+                <span class="mt-2 inline-block rounded-full bg-cyan-500 px-3 py-0.5 text-sm font-bold text-navy-900">2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div class="order-1 lg:order-2">
+        <span class="text-sm font-bold uppercase tracking-[0.18em] text-cyan-500">Xero Partner Awards 2025</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-black tracking-tight">JBS Named Large Firm of the Year</h2>
+        <p class="mt-4 text-lg leading-relaxed text-white/80">
+          As a <strong class="text-white">Xero Platinum Partner</strong>, JBS Corp was recognized at the
+          <strong class="text-white">Xero Partner Awards</strong> as <strong class="text-white">Large Firm of the Year (2025)</strong> —
+          a reflection of our commitment to modern, cloud-first accounting and the results we deliver for our clients.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+          <span class="inline-flex items-center gap-2 text-white/80"><span class="h-2 w-2 rounded-full bg-cyan-500"></span> Xero Platinum Partner</span>
+          <span class="inline-flex items-center gap-2 text-white/80"><span class="h-2 w-2 rounded-full bg-cyan-500"></span> Cloud-first accounting</span>
+          <span class="inline-flex items-center gap-2 text-white/80"><span class="h-2 w-2 rounded-full bg-cyan-500"></span> Award-winning team</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="bg-white py-16 sm:py-20 lg:py-24">
+    <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div class="max-w-2xl">
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-cyan-500">Reviews</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-black tracking-tight text-navy-900">What Our Clients Say</h2>
+        </div>
+        <a href="pages/reviews.html" class="inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
+          Read more reviews
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <figure class="flex flex-col rounded-2xl border border-line-200/70 bg-white p-6" style="box-shadow: var(--shadow-card);">
+          <div class="flex gap-0.5 text-cyan-500" aria-label="5 out of 5 stars">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+          </div>
+          <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-navy-800">"Alex and Jean were incredibly knowledgeable and took the time to walk me through each step. What can often be a stressful experience felt manageable and even enlightening."</blockquote>
+          <figcaption class="mt-5 border-t border-line-200 pt-4">
+            <p class="font-bold text-navy-900">Sultan A.</p>
+            <p class="text-[13px] text-slate-600">Individual Tax Client</p>
+          </figcaption>
+        </figure>
+
+        <!-- Review 2 -->
+        <figure class="flex flex-col rounded-2xl border border-line-200/70 bg-white p-6" style="box-shadow: var(--shadow-card);">
+          <div class="flex gap-0.5 text-cyan-500" aria-label="5 out of 5 stars">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+          </div>
+          <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-navy-800">"I was overwhelmed after a bad experience elsewhere. Jean Paul was professional and made me feel at ease immediately. He handled my return and my children's with complete accuracy."</blockquote>
+          <figcaption class="mt-5 border-t border-line-200 pt-4">
+            <p class="font-bold text-navy-900">Sevgi G.</p>
+            <p class="text-[13px] text-slate-600">Individual Tax Client</p>
+          </figcaption>
+        </figure>
+
+        <!-- Review 3 -->
+        <figure class="flex flex-col rounded-2xl border border-line-200/70 bg-white p-6" style="box-shadow: var(--shadow-card);">
+          <div class="flex gap-0.5 text-cyan-500" aria-label="5 out of 5 stars">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/></svg>
+          </div>
+          <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-navy-800">"JBS makes you feel like you're part of the family. Always responsive, always finding solutions. They go above and beyond for every single client, every single time."</blockquote>
+          <figcaption class="mt-5 border-t border-line-200 pt-4">
+            <p class="font-bold text-navy-900">Xaviar V.</p>
+            <p class="text-[13px] text-slate-600">Individual Tax Client</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WE SPEAK YOUR LANGUAGE ============ -->
+  <section class="bg-gradient-to-br from-navy-900/[0.04] to-cyan-500/[0.06]">
+    <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center py-16 sm:py-20">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="rounded-full bg-navy-900 px-3 py-1 text-xs font-bold tracking-wide text-white">English</span>
+          <span class="rounded-full bg-cyan-500 px-3 py-1 text-xs font-bold tracking-wide text-white">Español</span>
+        </div>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-black tracking-tight text-navy-900">We Speak Your Language</h2>
+        <p class="mt-4 max-w-xl text-lg leading-relaxed text-slate-600">
+          Our team is bilingual in English and Spanish — and fluent in Tax. No matter your background or where you're from,
+          you'll always feel understood and supported at JBS.
+        </p>
+        <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold">
+          Hablemos / Let's Talk
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <figure class="relative rounded-3xl bg-navy-900 p-8 sm:p-10 text-white" style="box-shadow: var(--shadow-card);">
+        <svg class="h-10 w-10 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 6C5 6 3 8 3 10.5S5 15 7.5 15c.2 0 .4 0 .6-.05C7.7 16.8 6.4 18 4.8 18.4c-.4.1-.6.5-.5.9.1.4.5.6.9.5C8.8 19 11 16 11 12.2V10.5C11 8 9.9 6 7.5 6zm9 0C14 6 12 8 12 10.5S14 15 16.5 15c.2 0 .4 0 .6-.05-.4 1.85-1.7 3.05-3.3 3.45-.4.1-.6.5-.5.9.1.4.5.6.9.5C17.8 19 20 16 20 12.2V10.5C20 8 18.9 6 16.5 6z"/></svg>
+        <blockquote class="mt-4 text-2xl sm:text-3xl font-black leading-snug">"La mejor compañía para hacer tus taxes"</blockquote>
+        <figcaption class="mt-5 text-white/70">— Jatashaly, <span class="text-white/90">Cliente</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-900 text-white/75">
+    <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 py-14 lg:py-16 grid gap-10 lg:gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+
+      <!-- Brand -->
+      <div class="col-span-2 lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="JBS Corp home">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-white text-navy-900 font-black tracking-tight">JBS</span>
+          <span class="flex flex-col leading-none">
+            <span class="text-[19px] font-black text-white tracking-tight">JBS Corp</span>
+            <span class="text-[11px] font-medium uppercase tracking-[0.18em] text-cyan-500">Accounting · Tax · Advisory</span>
+          </span>
+        </a>
+        <p class="mt-4 max-w-xs text-[15px] leading-relaxed">
+          Institutional-grade tax expertise with the personal attention of a local firm — serving individuals,
+          families, and growing businesses in all 50 states.
+        </p>
+        <div class="mt-5 flex items-center gap-3">
+          <a href="https://www.facebook.com/jbstaxes/" target="_blank" rel="noopener" aria-label="JBS Corp on Facebook" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-cyan-500">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/jbscorp/?hl=en" target="_blank" rel="noopener" aria-label="JBS Corp on Instagram" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-cyan-500">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/jbs-corp" target="_blank" rel="noopener" aria-label="JBS Corp on LinkedIn" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-cyan-500">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21h-4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Individual -->
+      <nav aria-label="Individual">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white">Individual</h3>
+        <ul class="mt-4 space-y-2.5 text-[15px]">
+          <li><a href="pages/individual-tax.html" class="hover:text-cyan-500 transition-colors">Tax &amp; Planning</a></li>
+        </ul>
+      </nav>
+
+      <!-- Business -->
+      <nav aria-label="Business">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white">Business</h3>
+        <ul class="mt-4 space-y-2.5 text-[15px]">
+          <li><a href="pages/business-bookkeeping.html" class="hover:text-cyan-500 transition-colors">Bookkeeping &amp; Controllership</a></li>
+          <li><a href="pages/business-tax.html" class="hover:text-cyan-500 transition-colors">Business Tax</a></li>
+        </ul>
+      </nav>
+
+      <!-- Company -->
+      <nav aria-label="Company">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white">Company</h3>
+        <ul class="mt-4 space-y-2.5 text-[15px]">
+          <li><a href="pages/about.html" class="hover:text-cyan-500 transition-colors">About JBS</a></li>
+          <li><a href="pages/reviews.html" class="hover:text-cyan-500 transition-colors">Reviews</a></li>
+          <li><a href="pages/resources.html" class="hover:text-cyan-500 transition-colors">Resources</a></li>
+          <li><a href="pages/about.html" class="hover:text-cyan-500 transition-colors">Careers</a></li>
+        </ul>
+      </nav>
+
+      <!-- Offices + actions -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white">Offices</h3>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 h-4 w-4 shrink-0 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Lawrence, MA
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-0.5 h-4 w-4 shrink-0 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Methuen, MA
+          </li>
+          <li class="text-[13px] text-white/55">Serving clients in all 50 states</li>
+        </ul>
+        <div class="mt-5 space-y-2.5">
+          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold">Book Appointment</a>
+          <div class="flex gap-2.5">
+            <a href="https://jacquelinebserv.securepayments.cardpointe.com/pay" target="_blank" rel="noopener" class="flex flex-1 items-center justify-center rounded-full border border-white/20 px-3 py-2 text-xs font-semibold text-white transition hover:border-cyan-500 hover:text-cyan-500">Make a Payment</a>
+            <a href="https://jbscorp.taxdome.com/en-us/signup" target="_blank" rel="noopener" class="flex flex-1 items-center justify-center rounded-full border border-white/20 px-3 py-2 text-xs font-semibold text-white transition hover:border-cyan-500 hover:text-cyan-500">Client Portal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-container px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] text-white/55">
+        <p>&copy; <span id="footer-year">2026</span> JBS Corp. All rights reserved.</p>
+        <a href="#" class="hover:text-cyan-500 transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

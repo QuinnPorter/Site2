@@ -1,0 +1,10 @@
+# Local Claude Code settings (machine-specific)
+.claude/settings.local.json
+
+# Dependencies (none committed; safety net)
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
