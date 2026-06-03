@@ -3,7 +3,7 @@
    the few interactions Tailwind utilities don't cover. */
 
 :root {
-  --navy-900: #1F3767; /* deep navy brand */
+  --navy-900: #1e3667; /* deep navy brand (brand-guide navy) */
   --navy-800: #183B56; /* primary body text / dark UI */
   --blue-700: #0056A7; /* strong blue */
   --blue-600: #1863DC; /* bright royal blue (primary CTA) */
@@ -24,6 +24,11 @@ body {
   color: var(--navy-800);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Brand heading font: Libre Baskerville (per JBS Brand Guidelines). Body stays Roboto. */
+h1, h2, h3 {
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
 }
 
 /* Hero background: white with a subtle navy->cyan geometric wash. */

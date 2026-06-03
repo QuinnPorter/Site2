@@ -6,10 +6,10 @@
   <title>JBS Corp — The Tax Firm That Gets the Full Picture</title>
   <meta name="description" content="Institutional-grade accounting, tax, and advisory with the personal attention of a local firm. Serving individuals, families, and growing businesses in all 50 states." />
 
-  <!-- Roboto (same family as the original site) -->
+  <!-- Roboto (body) + Libre Baskerville (headings, per brand guide) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
 
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +18,7 @@
       theme: {
         extend: {
           colors: {
-            navy:  { 900: '#1F3767', 800: '#183B56' },
+            navy:  { 900: '#1e3667', 800: '#183B56' },
             brand: { 700: '#0056A7', 600: '#1863DC' },
             cyan:  { 500: '#1A92CF' },
             slate: { 600: '#4E4B66' },
@@ -26,7 +26,10 @@
             ink:   { 900: '#212121' },
             rust:  { 500: '#CF531A' },
           },
-          fontFamily: { sans: ['Roboto', 'system-ui', 'sans-serif'] },
+          fontFamily: {
+            sans: ['Roboto', 'system-ui', 'sans-serif'],
+            serif: ['"Libre Baskerville"', 'Georgia', 'serif'],
+          },
           maxWidth: { container: '1200px' },
         },
       },
@@ -144,7 +147,7 @@
         <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener"
            class="btn-primary hidden lg:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">
           <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path stroke-linecap="round" d="M16 3v4M8 3v4M3 10h18"/></svg>
-          Book Appointment
+          Book an Appointment
         </a>
 
         <!-- Mobile hamburger -->
@@ -181,7 +184,7 @@
       <a href="pages/about.html" class="block rounded-lg px-1 py-2.5 font-medium hover:text-cyan-500">Events</a>
     </nav>
     <div class="border-t border-line-200 p-5 space-y-2.5">
-      <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold">Book Appointment</a>
+      <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold">Book an Appointment</a>
       <div class="grid grid-cols-2 gap-2.5">
         <a href="https://jacquelinebserv.securepayments.cardpointe.com/pay" target="_blank" rel="noopener" class="btn-ghost flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold">Make a Payment</a>
         <a href="https://jbscorp.taxdome.com/en-us/signup" target="_blank" rel="noopener" class="btn-ghost flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold">Client Portal</a>
@@ -204,6 +207,10 @@
           The Tax Firm That Gets the <span class="accent-underline text-brand-700">Full Picture</span>
         </h1>
 
+        <h2 lang="es" class="mt-3 text-xl sm:text-2xl lg:text-3xl font-bold leading-snug text-navy-900">
+          La firma de impuestos que ve el <span class="accent-underline text-brand-700">panorama completo</span>
+        </h2>
+
         <p class="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
           Institutional-grade tax expertise with the personal attention of a local firm —
           for individuals, families, and growing businesses across all 50 states.
@@ -212,7 +219,7 @@
         <div class="mt-8 flex flex-wrap items-center gap-3.5">
           <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener"
              class="btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold">
-            Get Started
+            Book an Appointment
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a href="#services" class="btn-ghost inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold">
@@ -317,7 +324,7 @@
           <h3 class="mt-5 text-lg font-bold text-navy-900">W-2 Employees</h3>
           <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">Full-time employees who want accuracy, speed, and every legitimate deduction — done right the first time.</p>
           <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
-            Get Started
+            Book an Appointment
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
@@ -330,7 +337,7 @@
           <h3 class="mt-5 text-lg font-bold text-navy-900">Real Estate Investors</h3>
           <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">Schedule E, rental income, depreciation, and pass-through deductions — all handled with precision.</p>
           <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
-            Get Started
+            Book an Appointment
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
@@ -343,7 +350,7 @@
           <h3 class="mt-5 text-lg font-bold text-navy-900">Freelancers &amp; 1099s</h3>
           <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">Schedule C, self-employment tax, home office, equipment — we help you pay only what you owe.</p>
           <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
-            Get Started
+            Book an Appointment
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
@@ -356,7 +363,7 @@
           <h3 class="mt-5 text-lg font-bold text-navy-900">Small Business Owners</h3>
           <p class="mt-2 flex-1 text-[15px] leading-relaxed text-slate-600">From forming an LLC to running day-to-day operations, we help you navigate taxes and maximize deductions.</p>
           <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:text-brand-700">
-            Get Started
+            Book an Appointment
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
@@ -482,7 +489,7 @@
           you'll always feel understood and supported at JBS.
         </p>
         <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold">
-          Hablemos / Let's Talk
+          Book an Appointment
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -568,7 +575,7 @@
           <li class="text-[13px] text-white/55">Serving clients in all 50 states</li>
         </ul>
         <div class="mt-5 space-y-2.5">
-          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold">Book Appointment</a>
+          <a href="https://calendly.com/d/3vk-shd-hgj" target="_blank" rel="noopener" class="btn-primary flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold">Book an Appointment</a>
           <div class="flex gap-2.5">
             <a href="https://jacquelinebserv.securepayments.cardpointe.com/pay" target="_blank" rel="noopener" class="flex flex-1 items-center justify-center rounded-full border border-white/20 px-3 py-2 text-xs font-semibold text-white transition hover:border-cyan-500 hover:text-cyan-500">Make a Payment</a>
             <a href="https://jbscorp.taxdome.com/en-us/signup" target="_blank" rel="noopener" class="flex flex-1 items-center justify-center rounded-full border border-white/20 px-3 py-2 text-xs font-semibold text-white transition hover:border-cyan-500 hover:text-cyan-500">Client Portal</a>
